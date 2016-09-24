@@ -71,7 +71,7 @@ input[type="button"]:focus, input[type="button"]:hover {
 .txt-heart {
     height: 100px;
     width: 170px;
-    background: url(images/txt-heart.png) no-repeat;
+    background: url(../images/txt-heart.png) no-repeat;
     -webkit-background-size: contain;
     background-size: contain;
     position: absolute;

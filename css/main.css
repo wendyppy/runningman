@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Glyphicons Halflings';
-    src: url('../../common/fonts/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.eot');
-    src: url('../../common/fonts/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../../common/fonts/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../../common/fonts/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../../common/fonts/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+    src: url('../fonts/glyphicons-halflings-regular.eot');
+    src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 body {
     padding: 20px 0;
