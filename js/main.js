@@ -1,6 +1,4 @@
-Bmob.initialize("eebad35c848f68f15226ec4f11a8e5bd", "0b65a92b98ad91e6d3051ad231467815");
 var RunningMan = Bmob.Object.extend("RunningMan");
-var user = Bmob.User.current();
 var MainDom = {
     mainTable: document.getElementById("mainTable"),
     isSort: false,
@@ -302,8 +300,4 @@ var MainModule = {
         });
     }
 };
-if (user && user.attributes && (!user.attributes.error)) {
-    MainModule.init();
-} else {
-    window.location.href = "login.html";
-}
+MainModule.init();

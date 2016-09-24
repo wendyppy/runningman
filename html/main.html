@@ -6,6 +6,15 @@
     <title>Running Man</title>
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <script src="../js/jQuery_v2.2.4.js"></script>
+    <script src="../js/bmob-min.js"></script>
+    <script type="text/javascript">
+    Bmob.initialize("eebad35c848f68f15226ec4f11a8e5bd", "0b65a92b98ad91e6d3051ad231467815");
+    var user = Bmob.User.current();
+    if (!user ||(user.attributes && user.attributes.error)) {
+        window.location.href = "login.html";
+    }
+    </script>
 </head>
 
 <body>
@@ -181,8 +190,6 @@
             </div>
         </div>
     </div>
-    <script src="../js/bmob-min.js"></script>
-    <script src="../js/jQuery_v2.2.4.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/main.js"></script>
 </body>
