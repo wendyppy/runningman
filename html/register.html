@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" type="text/css" href="../../common/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/register.css">
+</head>
+
+<body>
+    <div class="m-signin text-center">
+        <h3>账号注册</h3>
+        <h4 class="text-gray">记录你在RM看过的节目，一起开始新旅程！</h4>
+        <div class="form-group text-left u-reg-emailBox">
+            <!-- has error -->
+            <div>
+                <input type="email" class="form-control" id="u-reg-email" placeholder="邮箱">
+            </div>
+            <label class="control-label" id="reg_emailLabel" for="u-reg-email">
+                * 请输入正确的邮箱！
+            </label>
+        </div>
+        <div class="form-group text-left u-reg-unameBox">
+            <div>
+                <input type="text" class="form-control" id="u-reg-uname" placeholder="用户名">
+            </div>
+            <label class="control-label" id="reg_unameLabel" for="u-reg-uname">
+                * 用户名不能为空！
+            </label>
+        </div>
+        <div class="form-group text-left u-reg-pwdBox">
+            <div>
+                <input type="password" class="form-control" id="u-reg-pwd" placeholder="密码">
+            </div>
+            <label class="control-label" id="reg_pwdLabel" for="u-reg-pwd">
+                * 密码不能为空！
+            </label>
+        </div>
+        <div class="form-group text-left">
+            <!-- <div id="drag"></div> -->
+            <div id="drag">
+                <div class="drag_bg"></div>
+                <div class="drag_text" onselectstart="return false;" unselectable="on">拖动滑块验证</div>
+                <div class="handler handler_bg"></div>
+            </div>
+        </div>
+        <input type="button" class="btn btn-block btn-warning signin-btn" id="signBtn" value="注 册">
+        <p>已有账号？快去<a href="login.html" class="text-warning">登录</a></p>
+    </div>
+    <div class="modal fade bs-example-modal-sm" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="myModalLabel">提示</h4>
+                </div>
+                <div class="modal-body">
+                    <p id="errorAlert"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/bmob-min.js"></script>
+    <script src="../../common/js/jquery/jQuery_v2.2.4.js"></script>
+    <script src="../../common/js/bootstrap/3.3.5/bootstrap.min.js"></script>
+    <script src="../js/register.js"></script>
+</body>
+
+</html>

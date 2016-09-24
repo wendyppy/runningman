@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" type="text/css" href="../../common/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+</head>
+
+<body>
+    <div>
+        <div class="col-md-4 m-login text-center">
+            <h3>账号密码登录</h3>
+            <h4 class="text-gray">一起记录你喜欢的RM节目！</h4>
+            <div class="form-group text-left logUnameBox">
+                <input type="text" class="form-control" id="logUsername" placeholder="用户名">
+                <label class="control-label" id="log_unameLabel" for="logUsername">
+                    * 用户名不能为空！
+                </label>
+            </div>
+            <div class="form-group text-left logPwdBox">
+                <input type="password" class="form-control" id="logPwd" placeholder="密码">
+                <label class="control-label" id="log_pwdLabel" for="logPwd">
+                    * 密码不能为空！
+                </label>
+            </div>
+            <input type="button" class="btn btn-block login-btn" id="logBtn" value="登 录">
+            <h5><a href="register.html" class="text-success">注册新账号</a></h5>
+        </div>
+    </div>
+    <div class="txts">
+        <div class="txt-rm"></div>
+        <div class="txt-run"></div>
+        <div class="txt-heart"></div>
+    </div>
+    <div class="modal fade bs-example-modal-sm" id="errorModalLog" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="myModalLabel2">提示</h4>
+                </div>
+                <div class="modal-body">
+                    <p id="errorAlertLog"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/bmob-min.js"></script>
+    <script src="../../common/js/jquery/jQuery_v2.2.4.js"></script>
+    <script src="../../common/js/bootstrap/3.3.5/bootstrap.min.js"></script>
+    <script src="../js/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+body {
+    background: url(../images/rm.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+    -moz-background-size: cover;
+    background-size: cover;
+    -webkit-background-size: cover;
+    overflow: hidden;
+}
+.m-login {
+    position: absolute;
+    top: 160px;
+    right: 65px;
+    height: 410px;
+    width: 370px;
+    padding: 35px 25px 0px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px #aaaaaa;
+}
+.m-login h3, h4 {
+    margin-bottom: 20px;
+}
+.m-login h4 {
+    font-weight: 400;
+}
+.m-login input {
+    height: 40px;
+    margin-bottom: 2px;
+}
+.m-login .login-btn {
+    margin-bottom: 30px;
+    cursor: pointer;
+    background: #86ce2f;
+    border: none;
+    color: #fff;
+    textoutline: none;
+}
+.login-btn:hover, .login-btn:focus {
+    color: #fff;
+}
+input[type="button"]:focus, input[type="button"]:hover {
+    outline: none;
+    border: none;
+}
+.txts {
+    position: relative;
+    top: 85vh;
+}
+.txt-rm {
+    height: 100px;
+    width: 380px;
+    background: url(../images/txt-rm2.png) no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    position: absolute;
+    left: 30px;
+    bottom: -20px;
+}
+.txt-run {
+    height: 246px;
+    width: 508px;
+    background: url(../images/txt-run.png) no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    position: absolute;
+    left: 80px;
+    bottom: -230px;
+}
+.txt-heart {
+    height: 100px;
+    width: 170px;
+    background: url(images/txt-heart.png) no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    position: absolute;
+    left: 260px;
+    bottom: -55px;
+    transform: rotate(25deg);
+    -o-transform: rotate(25deg);
+    -webkit-transform: rotate(25deg);
+    -moz-transform: rotate(25deg);
+}
+.text-gray {
+    color: #333;
+}
+.m-login .form-group {
+    margin-bottom: 12px;
+}
+.m-login .control-label {
+    visibility: hidden;
+    margin-bottom: 0;
+}
+#errorModalLog {
+    margin-top: 20vh;
+}

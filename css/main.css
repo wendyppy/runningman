@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../../common/fonts/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.eot');
+    src: url('../../common/fonts/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../../common/fonts/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../../common/fonts/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../../common/fonts/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+body {
+    padding: 20px 0;
+    background: #C5DA99 url(../images/img01.jpg) repeat;
+}
+.content table {
+    background: #fff;
+    *border-collapse: collapse;
+    border-spacing: 0px;
+    border-radius: 10px;
+}
+.content caption {
+    background: url(../images/img02.jpg) repeat;
+    margin: 10px 20em 25px;
+    box-shadow: -1px 2px 5px #555;
+    color: #fff;
+}
+.content tr {
+    height: 3em;
+}
+.content tbody tr:hover, .content tbody tr:focus {
+    background: rgba(211, 177, 125, 0.2);
+}
+.wrap {
+    margin-top: -6vh;
+}
+#addModal {
+    margin-top: 12vh;
+}
+.content {
+    height: 73vh;
+    margin-bottom: 3vh;
+}
+.myNav a {
+    color: #333;
+}
+.myNav a:hover, .myNav a:focus {
+    color: #337ab7;
+    text-shadow: 0px 0px 25px rgba(255, 255, 255, 1);
+}
+.myNav .plusA a {
+    color: #8C4356;
+}
+.myNav .plusA a:hover, .myNav .plusA a:focus {
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 1);
+}
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: transparent;
+}
+#mainTableBox th, #mainTableBox td, #mainTableBox caption {
+    text-align: center;
+    vertical-align: middle;
+}
+.errorStar {
+    font-size: 1.5em;
+    color: #a94442;
+    visibility: hidden;
+}
+.objectId {
+    display: none;
+}
+.wrap .pagination {
+    margin: 0 0 20px;
+}
+.wrap .pagination a {
+    color: #333;
+}
+.plusA a {
+    outline: none;
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Running Man</title>
+    <link rel="stylesheet" type="text/css" href="../../common/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+</head>
+
+<body>
+    <nav class="navbar" role="navigation">
+        <div class="container-fluid myNav">
+            <div class="col-md-offset-2 col-md-8">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="javascript:;">hello <span id="welcomeUser">RunningMan</span></a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="register.html"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
+                    <li><a href="javascript:;" onclick="MainModule.logout()"><span class="glyphicon glyphicon-log-out"></span> 登出</a></li>
+                    <li class="plusA"><a href="#addModal" data-toggle="modal"><span class="glyphicon glyphicon-plus"></span> 新增</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid wrap">
+        <div class="row content">
+            <div class="col-md-8 col-md-offset-2">
+                <table class="table" id="mainTableBox">
+                    <caption>RunningMan节目记录</caption>
+                    <thead>
+                        <tr>
+                            <th class="">#</th>
+                            <th class="col-md-1">时间</th>
+                            <th class="col-md-1">期数</th>
+                            <th class="col-md-2">名称</th>
+                            <th class="col-md-2">嘉宾</th>
+                            <th class="col-md-3">备注</th>
+                            <th class="col-md-1">看过</th>
+                            <th class="objectId">objectId</th>
+                            <th class="col-md-2" colspan="2">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="mainTable"></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="col-sm-4 text-left">共有 <span id="itemsCount">0</span> 条记录</div>
+                <div class="col-sm-4 text-center">
+                    <nav>
+                        <ul class="pagination pagination-sm" id="pagesBtn">
+                            <li><a href="javascript:;" onclick="cutPages(0)">1</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-sm-4 text-right">当前是第 <span id="currentPage">1</span> 页</div>
+            </div>
+        </div>
+    </div>
+    <!-- addModal -->
+    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close cancelItem"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="addModalLabel">新增条目</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal">
+                        <div class="form-group f1">
+                            <label for="m_time" class="col-sm-2 control-label">时间</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="m_time" placeholder="时间">
+                            </div>
+                            <span class="errorStar" id="m_timeStar_add">*</span>
+                        </div>
+                        <div class="form-group f2">
+                            <label for="m_ep" class="col-sm-2 control-label">期数</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="m_ep" placeholder="期数">
+                            </div>
+                        </div>
+                        <div class="form-group f3">
+                            <label for="m_name" class="col-sm-2 control-label">名称</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="m_name" placeholder="名称">
+                            </div>
+                        </div>
+                        <div class="form-group f4">
+                            <label for="m_guests" class="col-sm-2 control-label">嘉宾</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="m_guests" placeholder="嘉宾">
+                            </div>
+                        </div>
+                        <div class="form-group f5">
+                            <label for="m_tips" class="col-sm-2 control-label">备注</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="m_tips" placeholder="备注">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">已看过</label>
+                            <div class="col-sm-9">
+                                <label class="radio-inline">
+                                    <input type="radio" name="m-hasseen" id="m_seen" value="已看过" checked> 是
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="m-hasseen" id="m_notseen" value="未看过"> 否
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default cancelItem">取消</button>
+                    <button type="button" class="btn btn-primary" id="saveItem">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- alterModal -->
+    <div class="modal fade" id="alterModal" tabindex="-1" role="dialog" aria-labelledby="alterModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close cancelItem"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="alterModalLabel">修改内容</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal">
+                        <div class="form-group f1">
+                            <label for="m_time_alter" class="col-sm-2 control-label">时间</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="m_time_alter" placeholder="时间">
+                            </div>
+                            <span class="errorStar" id="m_timeStar_alter">*</span>
+                        </div>
+                        <div class="form-group f2">
+                            <label for="m_ep_alter" class="col-sm-2 control-label">期数</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="m_ep_alter" placeholder="期数">
+                            </div>
+                        </div>
+                        <div class="form-group f3">
+                            <label for="m_name_alter" class="col-sm-2 control-label">名称</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="m_name_alter" placeholder="名称">
+                            </div>
+                        </div>
+                        <div class="form-group f4">
+                            <label for="m_guests_alter" class="col-sm-2 control-label">嘉宾</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="m_guests_alter" placeholder="嘉宾">
+                            </div>
+                        </div>
+                        <div class="form-group f5">
+                            <label for="m_tips_alter" class="col-sm-2 control-label">备注</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="m_tips_alter" placeholder="备注">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">已看过</label>
+                            <div class="col-sm-9">
+                                <label class="radio-inline">
+                                    <input type="radio" name="m-hasseen-alter" id="m_seen_alter" value="已看过" checked> 是
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="m-hasseen-alter" id="m_notseen_alter" value="未看过"> 否
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default cancelItem">取消</button>
+                    <button type="button" class="btn btn-primary" id="saveItem_alter">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/bmob-min.js"></script>
+    <script src="../../common/js/jquery/jQuery_v2.2.4.js"></script>
+    <script src="../../common/js/bootstrap/3.3.5/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
