@@ -10,6 +10,10 @@
 
 偶然看了韩国很火的综艺的综艺节目《Running man》的鬼姐妹特辑，觉得情节设计很棒，想找几期经典的来看。网上推荐精彩期数的作者不同，推荐的内容格式不大一样，整理起来比较麻烦，所以做成了比较直观的表格，可以注册登录录入自己个性化的意向期数。
 
+## 预览地址:
+
+[http://runningman.ilanyy.com/html/main.html](http://runningman.ilanyy.com/html/main.html)
+
 ## 项目介绍
 
 新用户注册后自动录入一条示例数据。
