@@ -55,7 +55,7 @@ Bmob.initialize("YourApplicationId", "RestId");
 
 ## 开发
 
-0-0-9 ，[博客： Wendy's Blog](http://blog.ilanyy.com/)
+0-0-9 ，[博客： Wendy's Blog](http://www.hardworking.top)
 
 ## License
 
